@@ -1,0 +1,100 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #FFB6C1, #FFD700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 40px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.weather-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.weather-result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-result p {
+    margin: 8px 0;
+}
+
+.weather-result .error {
+    color: red;
+    font-size: 18px;
+}
+
+.weather-result .success {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Weather-based Background */
+.clear {
+    background: linear-gradient(120deg, #87CEEB, #FFD700);
+}
+
+.cloudy {
+    background: linear-gradient(120deg, #B0C4DE, #D3D3D3);
+}
+
+.rain {
+    background: linear-gradient(120deg, #4682B4, #5F9EA0);
+}
+
+.snow {
+    background: linear-gradient(120deg, #B0E0E6, #E0FFFF);
+}
